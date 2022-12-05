@@ -1,30 +1,32 @@
-// referencias html
+// html references
 
-const inputRating = document.querySelector('.rating');
+const inputRating = document.querySelector('.rating-list');
 const insertSpan = document.querySelector('.selected-rating');
 const btnSubmit = document.querySelector('.btn-submit');
 const mainScreen = document.querySelector('#main-state');
 const tnksScreen = document.querySelector('#thankyou-state');
 
-// funciones
+// functions
 const insertHtml = (text) => {
     const spanHtml = `${text}`;
     insertSpan.innerHTML = spanHtml;
 }
 
 const changeScreen = () => {
-    mainScreen.style.display = 'none';
-    tnksScreen.style.display = 'initial';
+    mainScreen.classList.toggle('hidden');
+    tnksScreen.classList.toggle('hidden');
 };
 
-// eventos
+// events
 
 inputRating.addEventListener('click', (event) => {
-    text = event.target.textContent;
-    if(text.length == 1){
-        insertHtml(text);
+    btnRadio = event;
+    console.log(btnRadio);
+    if(btnRadio.target.value >= 1){
+        insertHtml(btnRadio.target.value);
         btnSubmit.addEventListener('click', () => {
-                changeScreen();
+            changeScreen();
+            btnRadio.target.checked = false;
         });
     };
-})
+});
