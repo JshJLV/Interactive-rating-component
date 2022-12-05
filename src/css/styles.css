@@ -16,19 +16,20 @@
     --dark-blue: hsl(213, 19%, 18%);
     --very-dark-blue: hsl(216, 12%, 8%);
     --little-dark-blue: #252e37;
-    font-family: 'Overpass', sans-serif;
 }
 
 /* general styles */
 
 body {
     background-color: var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
 }
 
 .container-design {
     margin: 0 auto;
     width: 90%;
-    height: 318px;
+    max-width: 400px;
+    height: 400px;
     background-color: var(--dark-blue);
     border-radius: 1rem;
     transform: translateY(50%);
@@ -62,39 +63,49 @@ body {
 
 .title-description {
     color: var(--white);
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .paragraph-description{
     color: var(--light-grey);
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 36px;
 }
 
-.rating {
+.rating-list {
     display: flex;
     justify-content: space-between;
     color: var(--medium-grey);
     list-style: none;
-    margin-bottom: 20px; 
+    margin-bottom: 36px; 
 }
 
-.rating li {
-    font-size: 14px;
-    background-color: var(--light-grey);
-    width: 40px;
-    height: 40px;
+.label-rating input[type="radio"] {
+    display: none;
+}
+
+.label-rating span{
+    display: block;
+    font-size: 16px;
+    background-color: #ccc;
+    width: 45px;
+    height: 45px;
     text-align: center;
-    line-height: 40px;
+    line-height: 45px;
     border-radius: 100%;
     transition: all 200ms;
 }
 
-.rating li:hover {
+.label-rating span:hover {
     cursor: pointer;
-    background-color: #ccc;
+    background-color: #17b1ee;
     color: white;
+}
+
+.label-rating input[type="radio"]:checked ~ span {
+    color: var(--white);
+    background-color: var(--orange);
 }
 
 .btn-submit {
@@ -112,11 +123,6 @@ body {
     cursor: pointer;
     background-color: var(--white);
     color: var(--orange);
-}
-
-.btn-submit::selection {
-    color: var(--white);
-    background-color: var(--orange);
 }
 
 /* thank you state */
