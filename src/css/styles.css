@@ -15,7 +15,7 @@
     --medium-grey: hsl(216, 12%, 54%);
     --dark-blue: hsl(213, 19%, 18%);
     --very-dark-blue: hsl(216, 12%, 8%);
-    --little-dark-blue: #252e37;
+    --little-dark-blue: hsl(213, 20%, 31%);;
 }
 
 /* general styles */
@@ -48,7 +48,7 @@ body {
 }
 
 .star-container {
-    background-color: var(--light-grey);
+    background-color: var(--little-dark-blue);
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -68,7 +68,7 @@ body {
 }
 
 .paragraph-description{
-    color: var(--light-grey);
+    color: var(--medium-grey);
     font-size: 18px;
     margin-bottom: 36px;
 }
@@ -76,9 +76,8 @@ body {
 .rating-list {
     display: flex;
     justify-content: space-between;
-    color: var(--medium-grey);
     list-style: none;
-    margin-bottom: 36px; 
+    margin-bottom: 36px;
 }
 
 .label-rating input[type="radio"] {
@@ -88,7 +87,8 @@ body {
 .label-rating span{
     display: block;
     font-size: 16px;
-    background-color: #ccc;
+    background-color: var(--little-dark-blue);
+    color: var(--medium-grey);
     width: 45px;
     height: 45px;
     text-align: center;
@@ -99,8 +99,8 @@ body {
 
 .label-rating span:hover {
     cursor: pointer;
-    background-color: #17b1ee;
-    color: white;
+    background-color: var(--light-grey);
+    color: var(--white);
 }
 
 .label-rating input[type="radio"]:checked ~ span {
@@ -135,8 +135,8 @@ body {
 .rating-div {
     color: var(--orange);
     text-align: center;
-    background-color: var(--medium-grey);
-    margin: 12px 0px;
+    background-color: var(--little-dark-blue);
+    margin: 16px 0px;
     font-size: 16px;
     width: 180px;
     align-self: center;
@@ -150,12 +150,13 @@ body {
 
 .txt-thank-you {
     color: var(--white);
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .paragraph-thankyou {
-    color: var(--light-grey);
-    font-size: 14px;
+    color: var(--medium-grey);
+    font-size: 18px;
     margin: 12px 0px;
 }
 
