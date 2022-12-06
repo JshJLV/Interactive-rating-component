@@ -21,7 +21,6 @@ const changeScreen = () => {
 
 inputRating.addEventListener('click', (event) => {
     btnRadio = event;
-    console.log(btnRadio);
     if(btnRadio.target.value >= 1){
         insertHtml(btnRadio.target.value);
         btnSubmit.addEventListener('click', () => {
