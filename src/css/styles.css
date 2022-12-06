@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
 }
 
 /* variables */
-
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 :root {
     --orange: hsl(25, 97%, 53%);
@@ -22,7 +23,6 @@
 
 body {
     background-color: var(--very-dark-blue);
-    font-family: 'Overpass', sans-serif;
 }
 
 .container-design {
@@ -65,6 +65,7 @@ body {
     color: var(--white);
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .paragraph-description{
@@ -152,6 +153,7 @@ body {
     color: var(--white);
     font-size: 24px;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .paragraph-thankyou {
@@ -160,7 +162,7 @@ body {
     margin: 12px 0px;
 }
 
-/* hidden screen */
+/* hiding screen status */
 
 .hidden {
     display: none;
